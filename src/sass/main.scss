@@ -1,0 +1,82 @@
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+@import "compass/layout/grid-background";
+
+@mixin section-box {
+  @include border-radius(4px,4px);
+  @include single-box-shadow(rgba(0,0,0,.25), 1px, 2px, 6px, 0px);
+  background: #fafafa;
+  border: 1px solid #ddd;
+  padding: 15px;
+}
+
+$base-text: #111;
+$bootstrap-width: 940px;
+
+body {
+  //background: #f6f5ee;//3a1e1a;
+  margin: 0;
+  padding: 0;
+}
+
+.navlist {
+  margin-top: 55px;
+}
+.navlist li {
+  display: inline;
+  font-size: 18px;
+  line-height: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 20px 0 0;
+}
+.navlist li a {
+  color: #fff;
+}
+
+#content {
+  background: #fff;
+}
+
+// Sticky Footer
+html,
+body {
+ height: 100%;
+ /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+ min-height: 100%;
+ height: auto !important;
+ height: 100%;
+ /* Negative indent footer by it's height */
+ margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+ height: 60px;
+}
+#footer {
+ background-color: #f5f5f5;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+ #footer {
+   margin-left: -20px;
+   margin-right: -20px;
+   padding-left: 20px;
+   padding-right: 20px;
+  }
+}
+
+
+// OVERRIDE
+.navbar {
+  margin: 0;
+  position: relative;
+  z-index: 20;
+}
